@@ -1,0 +1,4 @@
+[16-Jul-2014 08:57:25 America/Chicago] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 53022721 bytes) in /home4/greatbtp/public_html/mobitick/new/system/core/Loader.php on line 858
+[16-Jul-2014 08:58:48 America/Chicago] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 53022721 bytes) in /home4/greatbtp/public_html/mobitick/new/system/core/Loader.php on line 858
+[16-Jul-2014 09:06:15 America/Chicago] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 53022721 bytes) in /home4/greatbtp/public_html/mobitick/new/system/core/Loader.php on line 858
+[16-Jul-2014 09:11:53 America/Chicago] PHP Fatal error:  Allowed memory size of 268435456 bytes exhausted (tried to allocate 53022721 bytes) in /home4/greatbtp/public_html/mobitick/new/system/core/Loader.php on line 858

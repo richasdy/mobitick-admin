@@ -1,0 +1,91 @@
+********************************************
+******* CARANYA ****************************
+SELECT 
+	* 
+    FROM 
+    tableA 
+LEFT JOIN 
+    tableB 
+    ON TableB.x = TableA.y 
+LEFT JOIN 
+	tableC 
+    ON TableC.x = TableB.y 
+    AND TableC.y = TableA.z
+    
+*********************************************
+****** t_bus - t_tipebus ********************
+SELECT 
+	* 
+    FROM 
+    t_bus
+LEFT JOIN 
+    t_tipebus 
+    ON t_tipebus.nama_tipe = t_bus.tipe_busnya
+    
+    
+*********************************************
+****** t_jadwalbus - t_lokasi - t_tujuan ***
+SELECT 
+	* 
+    FROM 
+    t_jadwalbus
+LEFT JOIN 
+    t_lokasi 
+    ON t_lokasi.id_lokasi = t_jadwalbus.id_lokasinya
+LEFT JOIN 
+    t_tujuan
+    ON t_tujuan.id_tujuan = t_jadwalbus.id_tujuannya
+LEFT JOIN
+    t_bus
+    ON t_bus.id_bus = t_jadwalbus.id_busnya
+    
+    
+***********************************************************************
+****** t_pemesanan_tiket - [t_jadwalbus] - [t_bus] ********************
+SELECT 
+	* 
+    FROM 
+	t_pemesanan_tiket
+LEFT JOIN
+    t_jadwalbus
+    ON t_jadwalbus.id_jadwalbus = t_pemesanan_tiket.id_jadwalbusnya
+LEFT JOIN 
+    t_lokasi 
+    ON t_lokasi.id_lokasi = t_jadwalbus.id_lokasinya
+LEFT JOIN 
+    t_tujuan
+    ON t_tujuan.id_tujuan = t_jadwalbus.id_tujuannya
+LEFT JOIN
+    t_bus
+    ON t_bus.id_bus = t_jadwalbus.id_busnya
+LEFT JOIN 
+    t_tipebus 
+    ON t_tipebus.nama_tipe = t_bus.tipe_busnya
+
+********************************************
+****** t_verifikasi *******************
+SELECT 
+	* 
+    FROM 
+	t_verifikasi
+    
+    
+*********************************************
+****** t_jadwalbus - t_lokasi - t_tujuan - t_bus - t_pemesanan_tiket***
+SELECT 
+	* 
+    FROM 
+    t_jadwalbus
+LEFT JOIN 
+    t_lokasi 
+    ON t_lokasi.id_lokasi = t_jadwalbus.id_lokasinya
+LEFT JOIN 
+    t_tujuan
+    ON t_tujuan.id_tujuan = t_jadwalbus.id_tujuannya
+LEFT JOIN
+    t_bus
+    ON t_bus.id_bus = t_jadwalbus.id_busnya
+LEFT JOIN
+	t_pemesanan_tiket
+    ON t_pemesanan_tiket.id_jadwalbusnya = t_jadwalbus.id_jadwalbus
+
